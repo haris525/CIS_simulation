@@ -58,8 +58,8 @@ bucket_3_count = max(0, bucket_3_count)
 
 # Weekly Flow Parameters
 st.sidebar.subheader("Weekly Parameters")
-weekly_opened = st.sidebar.slider("Complaints Opened / Week", 0, 50, 15)
-weekly_closed = st.sidebar.slider("Complaints Closed / Week", 0, 50, 20)
+weekly_opened = st.sidebar.slider("Complaints Opened / Week", 0, 1000, 200)
+weekly_closed = st.sidebar.slider("Complaints Closed / Week", 0, 1000, 150)
 
 closure_strategy = st.sidebar.selectbox(
     "Closure Strategy",
@@ -347,3 +347,4 @@ with st.expander("ℹ️ Model Assumptions"):
 - Does not account for seasonality or variable intake rates
 - Assumes constant weekly rates
     """)
+
