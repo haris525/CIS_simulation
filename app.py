@@ -285,7 +285,7 @@ target_weeks = st.slider(
 
 
 def find_required_closures(target_weeks, target_pct=target_1_pct):
-    for closures in range(weekly_opened, 200):
+    for closures in range(weekly_opened, 1000):
         test_df = simulate_aging(total_open, bucket_1_count, bucket_2_count, bucket_3_count,
                                  weekly_opened, closures,
                                  "Oldest First (Prioritize Aging)", target_weeks,
@@ -347,4 +347,5 @@ with st.expander("ℹ️ Model Assumptions"):
 - Does not account for seasonality or variable intake rates
 - Assumes constant weekly rates
     """)
+
 
